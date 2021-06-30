@@ -6,11 +6,15 @@ const startBtn = document.querySelector('#start-btn')
 const commenceBtn = document.querySelector('#commence-btn')
 const playerPortrait = document.querySelector('#player-portrait')
 const opponentPortrait = document.querySelector('#opponent-portrait')
+const rockChoice = document.querySelector('#rock')
+const paperChoice = document.querySelector('#paper')
+const scissorChoice = document.querySelector('#scissor')
+const choices = document.querySelectorAll('.choice')
 
 const choiceArray = ['rock', 'paper', 'scissors']
 let chosenImg
 let opponentImage
-
+let playerChoice
 
 
 startBtn.addEventListener('click', chooseCharacters)
@@ -52,3 +56,9 @@ function startGame() {
   opponentPortrait.src = opponentImage
 }
 
+choices.forEach(choice => {
+  choice.addEventListener('click', () => {
+    playerChoice = choice.id
+    console.log(playerChoice)
+  })
+})

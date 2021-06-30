@@ -112,7 +112,6 @@ main {
   flex-direction: column;
   visibility: hidden;
   position: absolute;
-  background-color: green;
   max-height: 90rem;
   min-height: 60rem;
   max-width: 120rem;
