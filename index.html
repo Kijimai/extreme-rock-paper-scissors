@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <title>💥EXTREME💥 Rock, Paper, Scissors</title>
+  </head>
+  <body>
+    <main>
+      <div class="start-container remove" id="start-container">
+        <div class="game-description">
+          <h2>Warriors from across time, collide in a battle to see who is the best at...</h2>
+        </div>
+        <div class="game-title">
+          <h1>💥EXTREME💥</h1>
+          <h2>Rock, Paper, Scissors</h2>
+        </div>
+        <button id="start-btn" class="btn">Start Game</button>
+      </div>
+      <div class="choose-character remove" id="choose-container">
+        <h2 class="section-header">Choose your warrior: </h2>
+        <div class="characters-container">
+          <img class="character-img" src="resources/images/warrior1.jpg" alt="One of the warriors chosen to become the Extreme Rock, Paper, Scissor champion.">
+          <img class="character-img" src="resources/images/warrior2.jpg" alt="One of the warriors chosen to become the Extreme Rock, Paper, Scissor champion.">
+          <img class="character-img" src="resources/images/warrior3.jpg" alt="One of the warriors chosen to become the Extreme Rock, Paper, Scissor champion.">
+          <img class="character-img" src="resources/images/warrior4.jpg" alt="One of the warriors chosen to become the Extreme Rock, Paper, Scissor champion.">
+          <img class="character-img" src="resources/images/warrior5.jpg" alt="One of the warriors chosen to become the Extreme Rock, Paper, Scissor champion.">
+          <img class="character-img" src="resources/images/warrior6.jpg" alt="One of the warriors chosen to become the Extreme Rock, Paper, Scissor champion.">
+        </div>
+        <button class="btn" id="commence-btn">Fight!</button>
+      </div>
+      <div class="game-container active" id="game-container">
+        <h2 class="section-header">THE BATTLE BEGINS</h2>
+        <div class="inner-game-container">
+          <img class="vs-img" src="resources/images/Street_Fighter_VS_logo.png" alt="">
+          <div class="player-container">
+            <img id="player-portrait" class="player-image" src="" alt="">
+            <div id="player-choice">
+              <i class="far fa-hand-rock"></i>
+            </div>
+          </div>
+          <div class="player-container">
+            <img id="opponent-portrait" class="player-image" src="" alt="">
+            <div id="opponent-choice">
+              <i class="far fa-hand-rock"></i>
+            </div>
+          </div>
+        </div>
+        <div class="choice-container">
+          <div class="choice">
+            <i class="far fa-hand-rock"></i>
+            <h3>ROCK</h3>
+          </div>
+          <div class="choice">
+            <i class="far fa-hand-paper"></i>
+            <h3>PAPER</h3>
+          </div>
+          <div class="choice">
+            <i class="far fa-hand-scissors"></i>
+            <h3>SCISSORS</h3>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
