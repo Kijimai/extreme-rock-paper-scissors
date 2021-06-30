@@ -13,7 +13,7 @@
   </head>
   <body>
     <main>
-      <div class="start-container remove" id="start-container">
+      <div class="start-container" id="start-container">
         <div class="game-description">
           <h2>Warriors from across time, collide in a battle to see who is the best at...</h2>
         </div>
@@ -23,7 +23,7 @@
         </div>
         <button id="start-btn" class="btn">Start Game</button>
       </div>
-      <div class="choose-character remove" id="choose-container">
+      <div class="choose-character" id="choose-container">
         <h2 class="section-header">Choose your warrior: </h2>
         <div class="characters-container">
           <img class="character-img" src="resources/images/warrior1.jpg" alt="One of the warriors chosen to become the Extreme Rock, Paper, Scissor champion.">
@@ -35,7 +35,7 @@
         </div>
         <button class="btn" id="commence-btn">Fight!</button>
       </div>
-      <div class="game-container active" id="game-container">
+      <div class="game-container" id="game-container">
         <h2 class="section-header">THE BATTLE BEGINS</h2>
         <div class="inner-game-container">
           <img class="vs-img" src="resources/images/Street_Fighter_VS_logo.png" alt="">
@@ -44,12 +44,14 @@
             <div id="player-choice">
               <i class="far fa-hand-rock"></i>
             </div>
+              <span class="score-container player-score" id="player-score">0</span>
           </div>
           <div class="player-container">
             <img id="opponent-portrait" class="player-image" src="" alt="">
             <div id="opponent-choice">
               <i class="far fa-hand-rock"></i>
             </div>
+              <span class="score-container opponent-score" id="opponent-score">0</span>
           </div>
         </div>
         <div class="choice-container">
@@ -66,6 +68,7 @@
             <h3>SCISSORS</h3>
           </div>
         </div>
+        <button class="btn" id="choice-btn">Go!</button>
       </div>
     </main>
     <script src="script.js"></script>

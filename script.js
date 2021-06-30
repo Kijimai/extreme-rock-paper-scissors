@@ -10,12 +10,16 @@ const rockChoice = document.querySelector('#rock')
 const paperChoice = document.querySelector('#paper')
 const scissorChoice = document.querySelector('#scissor')
 const choices = document.querySelectorAll('.choice')
+const choiceBtn = document.querySelector('#choice-btn')
+const playerScoreSpan = document.querySelector('#player-score')
+const opponentScoreSpan = document.querySelector('#opponent-score')
 
-const choiceArray = ['rock', 'paper', 'scissors']
-let chosenImg
+const choiceArray = ['rock', 'paper', 'scissor']
+let chosenImg = 'resources/images/Goobbue.png'
 let opponentImage
 let playerChoice
-
+let playerScore = 0
+let opponentScore = 0
 
 startBtn.addEventListener('click', chooseCharacters)
 commenceBtn.addEventListener('click', startGame)
@@ -45,7 +49,6 @@ function randomizeOpponent() {
 
 commenceBtn.addEventListener('click', startGame)
 
-
 function startGame() {
   chooseContainer.classList.add('remove')
   setTimeout(() => chooseContainer.classList.remove('active'), 800)
@@ -58,7 +61,64 @@ function startGame() {
 
 choices.forEach(choice => {
   choice.addEventListener('click', () => {
+    choices.forEach(choice => choice.classList.remove('chosen'))
+    choice.classList.add('chosen')
     playerChoice = choice.id
-    console.log(playerChoice)
   })
 })
+
+choiceBtn.addEventListener('click', compareChoicesAndScore)
+
+function compareChoicesAndScore() {
+  let randomizer = Math.floor(Math.random() * 3)
+  let computerChoice = choiceArray[randomizer]
+
+  if(playerChoice === '') {
+    console.log('Make a choice!')
+    return
+  }
+
+  if(playerChoice === computerChoice) {
+    console.log('Draw!')
+    console.log(computerChoice, " ", playerChoice)
+  } else if (playerChoice === 'rock') {
+    if(computerChoice === 'paper') {
+      console.log('Computer Wins!')
+      opponentScore++
+      console.log(computerChoice, " ", playerChoice)
+    } else if (computerChoice === 'scissor') {
+      console.log('You Win!')
+      playerScore++
+      console.log(computerChoice, " ", playerChoice)
+    }
+  } else if (playerChoice === 'paper') {
+    if(computerChoice === 'rock') {
+      console.log('You Win!')
+      playerScore++
+      console.log(computerChoice, " ", playerChoice)
+    } else if (computerChoice === 'scissor') {
+      console.log('Computer Wins!')
+      opponentScore++
+      console.log(computerChoice, " ", playerChoice)
+    }
+  } else if (playerChoice === 'scissor') {
+    if(computerChoice === 'paper') {
+      console.log('You Win!')
+      playerScore++
+      console.log(computerChoice, " ", playerChoice)
+    } else if (computerChoice === 'rock') {
+      console.log('Computer Wins!')
+      opponentScore++
+      console.log(computerChoice, " ", playerChoice)
+    }
+  }
+  playerChoice = ''
+  computerChoice = ''
+  choices.forEach(choice => choice.classList.remove('chosen'))
+  updateScore()
+}
+
+function updateScore() {
+  playerScoreSpan.textContent = playerScore
+  opponentScoreSpan.textContent = opponentScore
+}
