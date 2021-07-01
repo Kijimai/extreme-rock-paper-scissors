@@ -40,14 +40,12 @@ charImgs.forEach(charImg => {
 
 diffBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    storeDiff(btn.value)
+    diffBtns.forEach(btn => btn.classList.remove('selected'))
+    btn.classList.add('selected')
+    winCondition = btn.value
     console.log(winCondition)
   })
 })
-
-function storeDiff(diff) {
-  winCondition = parseInt(diff)
-}
 
 function chooseCharacters() {
   if(winCondition === '') {
@@ -55,6 +53,7 @@ function chooseCharacters() {
     return
   }
   setTimeout(() => {
+    jukebox.volume = 0.5
     jukebox.play()
     jukebox.loop = true
   }, 1500)

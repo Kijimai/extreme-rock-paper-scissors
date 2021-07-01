@@ -36,6 +36,7 @@ img {
   opacity: 0;
   position: absolute;
   top: 0.5rem;
+  right: 0.5rem;
   transition: opacity 1s ease;
   user-select: none;
   pointer-events: none;
@@ -70,16 +71,25 @@ img {
   flex-direction: column;
   justify-content: center;
   font-size: 2.6rem;
+  margin: 1rem 0;
+}
+
+.difficulty-container h3 {
+  user-select: none;
+  color: rgb(255, 255, 255);
 }
 
 .diff-btn {
   background-color: transparent;
-  padding: 2rem 3rem;
+  padding: 1.5rem 2.2rem;
   margin: 1rem 0.25rem 0;
+  border: 2px solid transparent;
+  border-radius: 5rem;
   cursor: pointer;
   font-size: 2rem;
+  font-weight: 600;
   transform: translateY(0);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease, border 0.3s ease, background-color 0.3s ease;
 }
 
 .diff-btn:active {
@@ -87,24 +97,39 @@ img {
 }
 
 .diff-btn:hover{
+  border: 2px solid red;
+  background-color: rgb(214, 97, 97);
   transform: translateY(-10%);
 }
 
 .diff-btn.selected {
+
+  color: #fff;
   background-color: red;
 }
 
 .game-title {
   font-size: 4rem;
   user-select: none;
+  font-family: 'Racing Sans One', sans-serif;
 }
 
 .btn {
-  margin-top: 3rem;
+  margin-top: 1rem;
   cursor: pointer;
-  padding: 2rem 4rem;
+  padding: 1rem 2rem;
   text-transform: uppercase;
   font-size: 3rem;
+  font-family: 'Racing Sans One', sans-serif;
+  background-color: rgb(214, 97, 97);
+  border-radius: 2.5rem;
+  border: 0.5rem solid red;
+  transition: 0.3s ease background-color, 0.3s ease color;
+}
+
+.btn:hover {
+  background-color: red;
+  color: #fff;
 }
 
 .section-header {
@@ -192,7 +217,7 @@ img {
 
 .choice-container {
   display: flex;
-  margin: 4rem auto 0;
+  margin: 2rem auto 0;
   border: 0.5rem solid orange;
   border-radius: 4rem;
   padding: 1rem 2rem;
@@ -237,6 +262,11 @@ img {
   object-fit: cover;
 }
 
+footer {
+  position: absolute;
+  bottom: 1rem;
+  font-size: 1.5rem;
+}
 
 @media (max-width: 768px) {
   .game-title {
@@ -247,9 +277,56 @@ img {
     width: 20rem;
     height: 20rem;
   }
+
+  .section-header {
+    font-size: 2rem;
+  }
+
+  .player-image {
+    height: 20rem;
+    width: 20rem;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .game-title {
+    font-size: 2.2rem;
+  }
+
+  .diff-btn {
+    font-size: 1.8rem;
+  }
+
+  .characters-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    justify-items: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+  }
+
 }
 
 @media (max-width: 375px) {
+  .game-title {
+    font-size: 2rem;
+  }
+
+  .difficulty-container h3 {
+    font-size: 2rem;
+  }
+
+  .diff-btn {
+    font-size: 1.6rem;
+  }
+
+  .btn {
+    font-size: 2.2rem;
+    padding: 0.5rem 1.5rem;
+  }
+
   .characters-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
