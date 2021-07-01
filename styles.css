@@ -351,6 +351,10 @@ footer a {
     align-items: center;
   }
 
+  .game-container {
+    min-width: 37.5rem;
+  }
+
   .choice-container {
     padding: 0.5rem;
   }
@@ -370,6 +374,10 @@ footer a {
 }
 
 @media (max-width: 375px) {
+
+  body {
+    max-width: 37.5rem;
+  }
 
   .jukebox {
     height: 2.5rem;
@@ -393,7 +401,6 @@ footer a {
   }
 
   .characters-container {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     justify-items: center;
@@ -437,5 +444,10 @@ footer a {
     right: auto;
     bottom: 1rem;
     right: 0;
+    font-size: 1.2rem;
   }
+}
+
+@media screen and (max-width: 375px) {
+
 }
