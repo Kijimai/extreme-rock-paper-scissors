@@ -42,7 +42,7 @@ diffBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     diffBtns.forEach(btn => btn.classList.remove('selected'))
     btn.classList.add('selected')
-    winCondition = btn.value
+    winCondition = parseInt(btn.value)
     console.log(winCondition)
   })
 })
