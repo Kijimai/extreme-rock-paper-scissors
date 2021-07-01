@@ -18,9 +18,7 @@ const opponentChoiceContainer = document.querySelector('#opponent-choice')
 const playerScoreSpan = document.querySelector('#player-score')
 const opponentScoreSpan = document.querySelector('#opponent-score')
 const conclusionText = document.querySelector('#conclusion-text')
-
-
-
+const restartBtn = document.querySelector('#restart')
 
 const choiceArray = ['rock', 'paper', 'scissors']
 let chosenImg = 'resources/images/Goobbue.png'
@@ -91,6 +89,8 @@ function startGame() {
   randomizeOpponent()
   playerPortrait.src = chosenImg
   opponentPortrait.src = opponentImage
+  setTimeout(() => restartBtn.classList.add('active'), 3000)
+
 }
 
 choices.forEach(choice => {
@@ -180,6 +180,7 @@ function checkScore() {
     conclusionText.textContent = 'YOU ARE THE CHAMPION!'
     jukebox.pause()
     isGameOver = true
+    setTimeout(() => victoryTheme(), 1500)
   } else if (opponentScore === winCondition) {
     const loseAudio = new Audio('resources/audio/YouLose.mp3')
     loseAudio.volume = 0.5
@@ -191,4 +192,10 @@ function checkScore() {
   } else {
     return
   }
+}
+
+function victoryTheme() {
+  const victory = new Audio('resources/audio/VictoryTheme.mp3')
+  victory.volume = 0.5
+  victory.play()
 }
