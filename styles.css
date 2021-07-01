@@ -307,6 +307,18 @@ footer {
     background-color: rgb(0, 0, 0);
   }
 
+  .choice-container {
+    padding: 0.5rem;
+  }
+
+  .choice {
+    padding: 0 2.5rem;
+  }
+
+  .choice-container i {
+    font-size: 5rem;
+  }
+
 }
 
 @media (max-width: 375px) {
@@ -337,7 +349,29 @@ footer {
   }
 
   .character-img {
-    width: 10rem;
-    height: 10rem;
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .player-image {
+    height: 15rem;
+    width: 15rem;
+  }
+
+  .vs-img {
+    height: 8rem;
+    width: 8rem;
+  }
+
+  .choice-container {
+    padding: 0.25rem;
+  }
+
+  .choice {
+    padding: 0.5rem 2rem;
+  }
+
+  .choice-container i {
+    font-size: 3rem;
   }
 }
