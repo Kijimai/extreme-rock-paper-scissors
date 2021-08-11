@@ -14,3 +14,5 @@ There are 3 different game lengths that end the game when either you or the comp
 
 ### Secrets
 There is a hidden playable character, and it isn't as hard as you think to unlock! 😁
+
+Try the game out here: https://kijimai.github.io/extreme-rock-paper-scissors/
